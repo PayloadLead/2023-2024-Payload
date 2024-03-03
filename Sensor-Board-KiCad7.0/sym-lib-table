@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "Pressure sensors")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/KiCad/6.0/symbols/Pressure sensors.kicad_sym")(options "")(descr ""))
+  (lib (name "Multiplexers")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/KiCad/6.0/symbols/Multiplexers.kicad_sym")(options "")(descr ""))
+  (lib (name "4_to_1_Multiplexer ")(type "KiCad")(uri "C:/Users/joblo/Downloads/4_to_1_Mux (1)/4_to_1_Mux/4_to_1_Multiplexer .kicad_sym")(options "")(descr ""))
+)
