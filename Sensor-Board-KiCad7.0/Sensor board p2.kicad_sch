@@ -5,6 +5,153 @@
   (paper "A4")
 
   (lib_symbols
+    (symbol "9401-0-15-15-23-27-10-0_1" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 8.89 6.35 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Value" "9401-0-15-15-23-27-10-0" (at -5.08 11.43 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at -3.81 6.35 0)
+        (effects (font (size 1.27 1.27) italic) hide)
+      )
+      (property "Datasheet" "9401-0-15-15-23-27-10-0" (at -7.62 8.89 0)
+        (effects (font (size 1.27 1.27) italic) hide)
+      )
+      (property "ki_locked" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "ki_keywords" "9401-0-15-15-23-27-10-0" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "9401-0-15-15-23-27-10-0_1_1_1"
+        (polyline
+          (pts
+            (xy 5.08 -2.54)
+            (xy 12.7 -2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 5.08 2.54)
+            (xy 5.08 -2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 10.16 0)
+            (xy 5.08 0)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 10.16 0)
+            (xy 8.89 -0.8467)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 10.16 0)
+            (xy 8.89 0.8467)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 12.7 -2.54)
+            (xy 12.7 2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 12.7 2.54)
+            (xy 5.08 2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (pin passive line (at 0 0 0) (length 5.08)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "9401-0-15-15-23-27-10-0_1_1_2"
+        (polyline
+          (pts
+            (xy 5.08 -2.54)
+            (xy 12.7 -2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 5.08 2.54)
+            (xy 5.08 -2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 7.62 0)
+            (xy 5.08 0)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 7.62 0)
+            (xy 8.89 -0.8467)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 7.62 0)
+            (xy 8.89 0.8467)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 12.7 -2.54)
+            (xy 12.7 2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 12.7 2.54)
+            (xy 5.08 2.54)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (pin unspecified line (at 0 0 0) (length 5.08)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Connector:TestPoint" (pin_numbers hide) (pin_names (offset 0.762) hide) (in_bom yes) (on_board yes)
       (property "Reference" "TP" (at 0 6.858 0)
         (effects (font (size 1.27 1.27)))
@@ -127,153 +274,6 @@
         (pin passive line (at 0 -3.81 90) (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "EChem socket:9401-0-15-15-23-27-10-0" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at 8.89 6.35 0)
-        (effects (font (size 1.524 1.524)))
-      )
-      (property "Value" "9401-0-15-15-23-27-10-0" (at -5.08 11.43 0)
-        (effects (font (size 1.524 1.524)))
-      )
-      (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at -3.81 6.35 0)
-        (effects (font (size 1.27 1.27) italic) hide)
-      )
-      (property "Datasheet" "9401-0-15-15-23-27-10-0" (at -7.62 8.89 0)
-        (effects (font (size 1.27 1.27) italic) hide)
-      )
-      (property "ki_locked" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "ki_keywords" "9401-0-15-15-23-27-10-0" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "9401-0-15-15-23-27-10-0_1_1"
-        (polyline
-          (pts
-            (xy 5.08 -2.54)
-            (xy 12.7 -2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 5.08 2.54)
-            (xy 5.08 -2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 10.16 0)
-            (xy 5.08 0)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 10.16 0)
-            (xy 8.89 -0.8467)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 10.16 0)
-            (xy 8.89 0.8467)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 12.7 -2.54)
-            (xy 12.7 2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 12.7 2.54)
-            (xy 5.08 2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (pin passive line (at 0 0 0) (length 5.08)
-          (name "" (effects (font (size 1.27 1.27))))
-          (number "" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "9401-0-15-15-23-27-10-0_1_2"
-        (polyline
-          (pts
-            (xy 5.08 -2.54)
-            (xy 12.7 -2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 5.08 2.54)
-            (xy 5.08 -2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 7.62 0)
-            (xy 5.08 0)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 7.62 0)
-            (xy 8.89 -0.8467)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 7.62 0)
-            (xy 8.89 0.8467)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 12.7 -2.54)
-            (xy 12.7 2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 12.7 2.54)
-            (xy 5.08 2.54)
-          )
-          (stroke (width 0.127) (type default))
-          (fill (type none))
-        )
-        (pin unspecified line (at 0 0 0) (length 5.08)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -2235,6 +2235,31 @@
     )
   )
 
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 107.95 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 17892db0-6688-4a95-ae2c-1a952a5f4f3b)
+    (property "Reference" "J11" (at 247.65 107.95 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 109.22 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 101.6 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 99.06 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 97e6e785-0d55-412a-952f-76ca0a750213))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J11") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R") (at 63.5 113.03 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1bce7bb0-7d46-4d79-9205-411ee04b6799)
@@ -2607,31 +2632,6 @@
     )
   )
 
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 124.46 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 28e17392-490b-44ee-aef6-87cc78105c47)
-    (property "Reference" "J13" (at 247.65 124.46 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 125.73 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 118.11 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 115.57 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid 89f4aa04-a53e-469e-8b10-8df530021a52))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J13") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 111.76 78.74 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 295d9561-120e-4376-b88f-7bfbd8f0dd3d)
@@ -2679,6 +2679,31 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "R10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 147.32 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 2b100495-c78d-4fea-b704-fe929cac40d8)
+    (property "Reference" "J16" (at 247.65 147.32 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 148.59 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 140.97 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 138.43 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid d7a4304d-2634-47e6-9193-a5489cb19c23))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J16") (unit 1)
         )
       )
     )
@@ -2756,31 +2781,6 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "R43") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 3a73f551-48be-4c48-8292-8b667d38abd7)
-    (property "Reference" "J10" (at 247.65 101.6 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 102.87 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 95.25 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 92.71 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid 857620a9-47a5-4512-8a59-3771d1fa19df))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J10") (unit 1)
         )
       )
     )
@@ -2869,31 +2869,6 @@
     )
   )
 
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 3f0c3b67-bcaf-4963-a459-f66edd52c93a)
-    (property "Reference" "J12" (at 247.65 114.3 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 115.57 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 107.95 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 105.41 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid 36adb76f-5e7e-48d5-936b-23dd8f329f9b))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J12") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Sensor:BME680") (at 43.18 173.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3fdacfcf-55fd-45ff-a5cd-c4121e6ac610)
@@ -2926,6 +2901,31 @@
     )
   )
 
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 137.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 49936681-0ff4-40ce-824a-71d2ffdabd1b)
+    (property "Reference" "J15" (at 247.65 137.16 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 138.43 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 130.81 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 128.27 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 7a4bc5e9-da5b-483f-9ba8-5c25aa93df67))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J15") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_name "GND_5") (lib_id "power:GND") (at 34.29 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4cefff0f-dede-4bc1-a137-7d96f5a22d34)
@@ -2946,6 +2946,31 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "#PWR06") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 101.6 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 53b369bf-5bf6-4b53-9281-73689b28ccd5)
+    (property "Reference" "J10" (at 247.65 101.6 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 102.87 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 95.25 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 92.71 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 24162a37-ae45-421e-9713-45b791dc72b4))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J10") (unit 1)
         )
       )
     )
@@ -3130,6 +3155,31 @@
     )
   )
 
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 114.3 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 6a2721d2-fa64-4be8-a132-18b96ad5a1ba)
+    (property "Reference" "J12" (at 247.65 114.3 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 115.57 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 107.95 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 105.41 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 7d0b7927-64c0-4ea9-ace9-c4a6a7fdce7b))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J12") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 63.5 66.04 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6aa91a78-6327-4f4b-88e7-49825bcf8da3)
@@ -3243,31 +3293,6 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "U18") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 130.81 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 71395cfd-70a8-4903-930d-9937ae5d3ffd)
-    (property "Reference" "J14" (at 247.65 130.81 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 132.08 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 124.46 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 121.92 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid bc3854fb-58cd-4613-b1a8-7d3d42d3897d))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J14") (unit 1)
         )
       )
     )
@@ -3531,6 +3556,31 @@
     )
   )
 
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 160.02 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 9fbffdd1-88b3-45c3-b82d-9eab48d44f30)
+    (property "Reference" "J18" (at 247.65 160.02 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 161.29 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 153.67 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 151.13 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 087eecff-67e4-4253-9d16-9d4341ef5b3f))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J18") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_name "GND_7") (lib_id "power:GND") (at 198.12 72.39 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a271621f-928d-4dd7-8afb-3ab621b4a067)
@@ -3551,31 +3601,6 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "#PWR037") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 160.02 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a34147c3-87ff-4a25-b0b4-225469241434)
-    (property "Reference" "J18" (at 247.65 160.02 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 161.29 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 153.67 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 151.13 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid 944c15a2-5bb6-44fa-a015-c3e3b3bc2f42))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J18") (unit 1)
         )
       )
     )
@@ -3864,31 +3889,6 @@
     )
   )
 
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 153.67 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bdd45cc2-301a-4c7b-8798-3d4fab8b1163)
-    (property "Reference" "J17" (at 247.65 153.67 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 154.94 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 147.32 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 144.78 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid c7707545-3789-4b11-b3cb-4c965341ec15))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J17") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 53.34 147.32 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid be4a6659-1ef3-4123-a504-d48771f15cb8)
@@ -3909,56 +3909,6 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "#PWR013") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 137.16 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c0966212-44b7-4bc3-a036-091798efdbff)
-    (property "Reference" "J15" (at 247.65 137.16 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 138.43 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 130.81 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 128.27 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid 83c8460c-954f-4367-ac7a-dd1f69e132f4))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J15") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 147.32 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c42404c1-a8d8-4b7e-b083-b1eab4e1ae7c)
-    (property "Reference" "J16" (at 247.65 147.32 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 148.59 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 140.97 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 138.43 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid f4ce6032-12b5-470a-a0b2-2ec61f00ebc1))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J16") (unit 1)
         )
       )
     )
@@ -4014,31 +3964,6 @@
     )
   )
 
-  (symbol (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 107.95 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c6512c94-871d-41b8-9505-9c581fedf750)
-    (property "Reference" "J11" (at 247.65 107.95 0)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 109.22 0)
-      (effects (font (size 1.524 1.524)) (justify left) hide)
-    )
-    (property "Footprint" "EChem socket:CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 101.6 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 99.06 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "" (uuid c4488312-5d0d-4ca7-a4b2-2e1a0f6a1caf))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
-          (reference "J11") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "OPA396DCKT:OPA396DCKT") (at 115.57 78.74 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ccd84f37-eae7-4e4b-93c6-d36daa376a56)
@@ -4063,6 +3988,31 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "U11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 124.46 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid cde00f81-46a4-4b9b-9c61-fdc94e09116b)
+    (property "Reference" "J13" (at 247.65 124.46 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 125.73 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 118.11 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 115.57 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid a2c86511-166a-41a1-8366-a6bc951de38b))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J13") (unit 1)
         )
       )
     )
@@ -4297,6 +4247,31 @@
     )
   )
 
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 130.81 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid eabff385-5b93-448c-a41b-ce844f985781)
+    (property "Reference" "J14" (at 247.65 130.81 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 132.08 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 124.46 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 121.92 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 89c0ac65-5c09-4f4f-91ec-6ac1e1cb00d9))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J14") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "MMBFJ177LT1G:MMBFJ177LT1") (at 120.65 162.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ec017eed-7db4-4d62-bc1a-7cd7266be267)
@@ -4394,6 +4369,31 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
           (reference "#PWR023") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_name "9401-0-15-15-23-27-10-0_1") (lib_id "EChem socket:9401-0-15-15-23-27-10-0") (at 234.95 153.67 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f8166322-a051-4ba5-ae47-4dc2dd570b99)
+    (property "Reference" "J17" (at 247.65 153.67 0)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "9401-0-15-15-23-27-10-0" (at 248.92 154.94 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
+    )
+    (property "Footprint" "CONN_0384-0-67-80-23-27-10-0_MIM" (at 231.14 147.32 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "9401-0-15-15-23-27-10-0" (at 227.33 144.78 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 7357af8c-b513-48ec-9239-235e128c7726))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd/eb03ba60-66c2-4345-a3c2-908f0a643e89"
+          (reference "J17") (unit 1)
         )
       )
     )
