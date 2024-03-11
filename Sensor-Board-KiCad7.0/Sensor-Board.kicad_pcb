@@ -6777,7 +6777,7 @@
     (property "ki_keywords" "Low voltage 8-channel I2C switch with reset")
     (path "/131b8b7f-1fa9-414d-8a44-6d9edc3125ee")
     (attr smd)
-    (fp_text reference "U13" (at 32.2768 19.53) (layer "F.SilkS")
+    (fp_text reference "U13" (at 11.05105 8.271786) (layer "F.SilkS")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 8e444773-0113-45c5-aa5c-273c7309fe02)
     )
