@@ -1,0 +1,30 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 23a6e51e-1cb6-4a77-a512-0884bf84448f)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (rectangle (start 101.6 35.56) (end 181.61 81.28)
+    (stroke (width 0) (type default))
+    (fill (type none))
+    (uuid 07469179-ee29-44ec-a2cf-6d4c5a55b607)
+  )
+  (rectangle (start 104.14 105.41) (end 196.85 156.21)
+    (stroke (width 0) (type default))
+    (fill (type none))
+    (uuid 7f70a461-17ce-4bd0-b4ae-9be7187bfc91)
+  )
+
+  (text "Air Pump\n" (at 149.86 102.87 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 5d505e7b-24ad-483a-9abc-636da77e1ed5)
+  )
+  (text "Solonoid Valves\n" (at 130.81 34.29 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 68ec10bd-1a48-4d17-976a-ef846e5cf5b1)
+  )
+)
