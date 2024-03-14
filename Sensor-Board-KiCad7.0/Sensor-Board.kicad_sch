@@ -3041,33 +3041,6 @@
     )
   )
 
-  (symbol (lib_id "EChem socket:3-pin_socket") (at 198.12 137.16 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 1ea991b3-71bf-4cd6-98a5-58f454719606)
-    (property "Reference" "U27" (at 204.47 130.81 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "~" (at 198.12 137.16 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "EChem socket:3-pin socket" (at 198.12 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 198.12 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "3" (uuid b6b0b3ab-ea90-4561-8f06-86da123745f0))
-    (pin "2" (uuid 37e3cadc-6d9d-418c-9d20-8ee62988718d))
-    (pin "1" (uuid 466fca34-fa38-491d-8079-63a420e43061))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
-          (reference "U27") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "OPA396DCKT:OPA396DCKT") (at 40.64 130.81 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1f5df9d3-bd9d-4c56-a629-5b89485050a7)
@@ -3296,6 +3269,33 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
           (reference "#PWR01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "EChem socket:3-pin_socket") (at 198.12 137.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 32a4771c-ed70-458e-9e75-4ba8f7bbfb47)
+    (property "Reference" "U27" (at 204.47 130.81 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "~" (at 198.12 137.16 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 198.12 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 198.12 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "3" (uuid 3b9121c3-cbf0-49b2-b3b5-68544589c1d4))
+    (pin "1" (uuid e186e739-ede2-4539-8528-1e77b2a11928))
+    (pin "2" (uuid 1a7870dc-b187-41dc-9d06-c8138ef6b090))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
+          (reference "U27") (unit 1)
         )
       )
     )
@@ -3752,33 +3752,6 @@
     )
   )
 
-  (symbol (lib_id "EChem socket:3-pin_socket") (at 198.12 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 57432730-5cd3-4b97-895d-20c13a06ecda)
-    (property "Reference" "U23" (at 204.47 107.95 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "~" (at 198.12 114.3 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "EChem socket:3-pin socket" (at 198.12 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 198.12 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "3" (uuid c9fbb03d-bdad-4cda-8e9b-3b5ef134e26e))
-    (pin "2" (uuid 84a65947-4d21-4fd3-98b0-d85225a24927))
-    (pin "1" (uuid 214b39fc-771b-4b34-a2d6-c3260961894f))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
-          (reference "U23") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C") (at 24.13 157.48 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 586e4aac-db60-4946-9b83-184858084035)
@@ -3952,33 +3925,6 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
           (reference "#PWR064") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "EChem socket:3-pin_socket") (at 198.12 160.02 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6a979e4a-e336-4247-bf0f-71755f0361b4)
-    (property "Reference" "U28" (at 204.47 153.67 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "~" (at 198.12 160.02 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "EChem socket:3-pin socket" (at 198.12 160.02 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 198.12 160.02 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "3" (uuid c037c800-d3a6-4701-8907-6db6b9d4863d))
-    (pin "2" (uuid e20c4935-42e0-4886-8009-46dd2b257886))
-    (pin "1" (uuid 230d4cfa-e666-42a5-908c-fa3fdeff1875))
-    (instances
-      (project "Sensor-Board"
-        (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
-          (reference "U28") (unit 1)
         )
       )
     )
@@ -4441,6 +4387,33 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
           (reference "#PWR048") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "EChem socket:3-pin_socket") (at 198.12 160.02 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 969e1c7e-89dd-43b5-80e3-507d93505edd)
+    (property "Reference" "U28" (at 204.47 153.67 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "~" (at 198.12 160.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 198.12 160.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 198.12 160.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "3" (uuid b708a341-dcd6-44ed-999e-4fee817dded1))
+    (pin "1" (uuid c193bc70-3109-4e24-ad1b-e1b7370f0235))
+    (pin "2" (uuid c787da7a-edbd-4242-ad2e-ce3445d6eacc))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
+          (reference "U28") (unit 1)
         )
       )
     )
@@ -5264,6 +5237,33 @@
       (project "Sensor-Board"
         (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
           (reference "TP11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "EChem socket:3-pin_socket") (at 198.12 114.3 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e8cf0835-65f9-4fad-80d9-59fb755baa6a)
+    (property "Reference" "U23" (at 204.47 107.95 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "~" (at 198.12 114.3 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 198.12 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 198.12 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "3" (uuid 7c3d5857-3972-4f9b-8640-3453c32d170c))
+    (pin "1" (uuid a02acb99-2003-490f-a6c6-4f32011e1f0f))
+    (pin "2" (uuid 4c5bd3b6-f691-42ba-b9d1-759e4c2abb50))
+    (instances
+      (project "Sensor-Board"
+        (path "/3a986dcd-349f-492d-950a-09832b2e5abd"
+          (reference "U23") (unit 1)
         )
       )
     )
