@@ -1,7 +1,7 @@
 #include <Wire.h>
 #define solenoidValvePin 1 // Set the pin of the solenoid valve
 
-int dPin = 8;
+int dPin = 8;   //digital pin on STM32 that will read data
 
 // VOID SETUP
 void setup() {
@@ -10,10 +10,10 @@ void setup() {
 
   pinMode(solenoidValvePin, OUTPUT); // Assigning the solenoid pin as output
   
-  pinMode(dPin, INPUT);
+  pinMode(dPin, INPUT);   //configuring dPin to act as input so that it can be read
   
-  // Start I2C communication with the Multiplexer
-  Wire.begin();
+  
+  Wire.begin(); //start I2C communication with the Multiplexer
 }
 
 
@@ -72,6 +72,8 @@ void printValuesNO2(int bus, int digitalPinName) {
   Serial.println(" ppm");
   
   Serial.println();
+
+  //can easily add more sensors if necessary, as well as conversion factors from bits to ppm and what not
 }
 
 bool solenoidValveState = false; // The state of the valve; false=>closed, true=>open (assuming starts closed)
