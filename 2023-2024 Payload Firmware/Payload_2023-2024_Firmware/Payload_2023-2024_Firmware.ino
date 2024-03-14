@@ -1,6 +1,7 @@
 #include <Wire.h>
 #define solenoidValvePin 1 // Set the pin of the solenoid valve
 
+int dPin = 8;
 
 // VOID SETUP
 void setup() {
@@ -37,7 +38,7 @@ void TCA9548A(uint8_t bus){
   Serial.print(bus);
 }
 
-int dPin = 8;
+
 
 
 void printValuesCO(int bus, int digitalPinName) {
