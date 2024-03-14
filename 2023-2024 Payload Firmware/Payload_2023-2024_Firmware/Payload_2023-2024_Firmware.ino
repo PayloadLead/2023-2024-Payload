@@ -78,6 +78,6 @@ void printValuesNO2(int bus, int digitalPinName) {
 
 bool solenoidValveState = false; // The state of the valve; false=>closed, true=>open (assuming starts closed)
 void activateSolenoid(){
-  solenoidValveState = digitalWrite(solenoidValvePin, LOW);digitalWrite(solenoidValvePin, HIGH); // Open/close the solenoid depending on the state
-  solenoidValveState = solenoidValveState = false;solenoidValveState = true; // Swap the states of the solenoid from either open=>close, or close=>open
+  solenoidValveState ? digitalWrite(solenoidValvePin, LOW) : digitalWrite(solenoidValvePin, HIGH); // Open/close the solenoid depending on the state
+  solenoidValveState ? solenoidValveState = false : solenoidValveState = true; // Swap the states of the solenoid from either open=>close, or close=>open
 }
