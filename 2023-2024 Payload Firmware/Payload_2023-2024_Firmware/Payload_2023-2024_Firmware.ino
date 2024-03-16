@@ -38,9 +38,6 @@ void TCA9548A(uint8_t bus){
   Serial.print(bus);
 }
 
-
-
-
 void printValuesCO(int bus, int digitalPinName) {
   TCA9548A (bus);
   Serial.print("Sensor number on bus");
@@ -48,7 +45,7 @@ void printValuesCO(int bus, int digitalPinName) {
   Serial.print("Carbon Monoxide Concentration = ");
   Serial.print(digitalRead(digitalPinName));
   Serial.println(" ppm");
-
+  
   Serial.println();
 }
 
@@ -59,7 +56,7 @@ void printValuesSO2(int bus, int digitalPinName) {
   Serial.print("Sulfate Concentration = ");
   Serial.print(digitalRead(digitalPinName));
   Serial.println(" ppm");
-
+  
   Serial.println();
 }
 
@@ -75,6 +72,7 @@ void printValuesNO2(int bus, int digitalPinName) {
 
   //can easily add more sensors if necessary, as well as conversion factors from bits to ppm and what not
 }
+
 
 bool solenoidValveState = false; // The state of the valve; false=>closed, true=>open (assuming starts closed)
 void activateSolenoid(){
