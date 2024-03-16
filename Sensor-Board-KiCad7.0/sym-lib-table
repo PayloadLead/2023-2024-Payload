@@ -1,8 +1,8 @@
 (sym_lib_table
   (version 7)
-  (lib (name "OPA396DCKT")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Symbols/OPA396DCKT.kicad_sym")(options "")(descr ""))
-  (lib (name "NAU7802")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Symbols/NAU7802.kicad_sym")(options "")(descr ""))
-  (lib (name "MMBFJ177LT1G")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Symbols/MMBFJ177LT1G.kicad_sym")(options "")(descr ""))
-  (lib (name "EChem socket")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Symbols/EChem socket.kicad_sym")(options "")(descr ""))
-  (lib (name "I2C Connector")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Symbols/I2C Connector.kicad_sym")(options "")(descr ""))
+  (lib (name "OPA396DCKT")(type "KiCad")(uri "${KIPRJMOD}/Symbols/OPA396DCKT.kicad_sym")(options "")(descr ""))
+  (lib (name "NAU7802")(type "KiCad")(uri "${KIPRJMOD}/Symbols/NAU7802.kicad_sym")(options "")(descr ""))
+  (lib (name "MMBFJ177LT1G")(type "KiCad")(uri "${KIPRJMOD}/Symbols/MMBFJ177LT1G.kicad_sym")(options "")(descr ""))
+  (lib (name "EChem socket")(type "KiCad")(uri "${KIPRJMOD}/Symbols/EChem socket.kicad_sym")(options "")(descr ""))
+  (lib (name "I2C Connector")(type "KiCad")(uri "${KIPRJMOD}/Symbols/I2C Connector.kicad_sym")(options "")(descr ""))
 )

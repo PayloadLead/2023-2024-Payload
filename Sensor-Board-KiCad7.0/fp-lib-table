@@ -1,8 +1,8 @@
 (fp_lib_table
   (version 7)
-  (lib (name "OPA396DCKT")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Footprints/OPA396DCKT")(options "")(descr ""))
-  (lib (name "NAU7802")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Footprints/NAU7802")(options "")(descr ""))
-  (lib (name "MMBFJ177LT1G")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Footprints/MMBFJ177LT1G")(options "")(descr ""))
-  (lib (name "EChem socket")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Footprints/EChem socket")(options "")(descr ""))
-  (lib (name "I2C Connector")(type "KiCad")(uri "C:/Users/joblo/OneDrive/Documents/2023-2024-Payload/Footprints/I2C Connector")(options "")(descr ""))
+  (lib (name "OPA396DCKT")(type "KiCad")(uri "${KIPRJMOD}/Footprints/OPA396DCKT")(options "")(descr ""))
+  (lib (name "NAU7802")(type "KiCad")(uri "${KIPRJMOD}/Footprints/NAU7802")(options "")(descr ""))
+  (lib (name "MMBFJ177LT1G")(type "KiCad")(uri "${KIPRJMOD}/Footprints/MMBFJ177LT1G")(options "")(descr ""))
+  (lib (name "EChem socket")(type "KiCad")(uri "${KIPRJMOD}/Footprints/EChem socket")(options "")(descr ""))
+  (lib (name "I2C Connector")(type "KiCad")(uri "${KIPRJMOD}/Footprints/I2C Connector")(options "")(descr ""))
 )
