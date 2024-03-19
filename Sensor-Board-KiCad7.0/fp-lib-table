@@ -5,4 +5,5 @@
   (lib (name "MMBFJ177LT1G")(type "KiCad")(uri "${KIPRJMOD}/Footprints/MMBFJ177LT1G")(options "")(descr ""))
   (lib (name "EChem socket")(type "KiCad")(uri "${KIPRJMOD}/Footprints/EChem socket")(options "")(descr ""))
   (lib (name "I2C Connector")(type "KiCad")(uri "${KIPRJMOD}/Footprints/I2C Connector")(options "")(descr ""))
+  (lib (name "B04B_XASK1")(type "KiCad")(uri "${KIPRJMOD}/Footprints/B04B_XASK1.pretty")(options "")(descr ""))
 )
