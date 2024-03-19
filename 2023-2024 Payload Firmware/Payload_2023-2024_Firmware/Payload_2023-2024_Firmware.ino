@@ -34,6 +34,10 @@ void loop() {
 void TCA9548A(uint8_t bus){
   Wire.beginTransmission(0x70);  // TCA9548A address is 0x70
   Wire.write(1 << bus);          // send byte to select bus
+  delay(100);
+  Wire.requestFrom(bus, Wire.available());
+  char availableBytes = Wire.read();
+  Serial.print(availableBytes);
   Wire.endTransmission();
   Serial.print(bus);
 }
@@ -43,7 +47,7 @@ void printValuesCO(int bus, int digitalPinName) {
   Serial.print("Sensor number on bus");
   Serial.println(bus);
   Serial.print("Carbon Monoxide Concentration = ");
-  Serial.print(digitalRead(digitalPinName));
+  Serial.print();
   Serial.println(" ppm");
   
   Serial.println();
