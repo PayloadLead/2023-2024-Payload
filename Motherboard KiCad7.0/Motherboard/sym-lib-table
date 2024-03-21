@@ -3,4 +3,6 @@
   (lib (name "CONN_2-1445057-2_TYCO")(type "KiCad")(uri "${KIPRJMOD}/Symbols/CONN_2-1445057-2_TYCO.kicad_sym")(options "")(descr ""))
   (lib (name "QRET_Buck_PSU-symbols")(type "KiCad")(uri "${KIPRJMOD}/Symbols/QRET_Buck_PSU-symbols.kicad_sym")(options "")(descr ""))
   (lib (name "Screw Switch")(type "KiCad")(uri "${KIPRJMOD}/Symbols/Screw Switch.kicad_sym")(options "")(descr ""))
+  (lib (name "DEV-13743")(type "KiCad")(uri "${KIPRJMOD}/Symbols/DEV-13743.kicad_sym")(options "")(descr ""))
+  (lib (name "CONN 0430450200")(type "KiCad")(uri "${KIPRJMOD}/Symbols/CONN 0430450200.kicad_sym")(options "")(descr ""))
 )

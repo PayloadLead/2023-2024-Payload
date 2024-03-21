@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "Footprint")(type "KiCad")(uri "${KIPRJMOD}/Footprint")(options "")(descr ""))
   (lib (name "LMR66100")(type "KiCad")(uri "${KIPRJMOD}/Footprint/LMR66100.pretty")(options "")(descr ""))
+  (lib (name "CONN 0430450200")(type "KiCad")(uri "${KIPRJMOD}/Footprint/CONN 0430450200.pretty")(options "")(descr ""))
 )
