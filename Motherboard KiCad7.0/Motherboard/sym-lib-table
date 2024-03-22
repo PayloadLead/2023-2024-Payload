@@ -5,4 +5,7 @@
   (lib (name "Screw Switch")(type "KiCad")(uri "${KIPRJMOD}/Symbols/Screw Switch.kicad_sym")(options "")(descr ""))
   (lib (name "DEV-13743")(type "KiCad")(uri "${KIPRJMOD}/Symbols/DEV-13743.kicad_sym")(options "")(descr ""))
   (lib (name "CONN 0430450200")(type "KiCad")(uri "${KIPRJMOD}/Symbols/CONN 0430450200.kicad_sym")(options "")(descr ""))
+  (lib (name "EdgeConnector")(type "KiCad")(uri "${KIPRJMOD}/Symbols/EdgeConnector.kicad_sym")(options "")(descr ""))
+  (lib (name "B04B_XASK_1")(type "KiCad")(uri "${KIPRJMOD}/Symbols/B04B_XASK_1.kicad_sym")(options "")(descr ""))
+  (lib (name "K7812JT-500R3-LB")(type "KiCad")(uri "${KIPRJMOD}/Symbols/K7812JT-500R3-LB.kicad_sym")(options "")(descr ""))
 )

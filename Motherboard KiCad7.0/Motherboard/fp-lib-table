@@ -3,4 +3,8 @@
   (lib (name "Footprint")(type "KiCad")(uri "${KIPRJMOD}/Footprint")(options "")(descr ""))
   (lib (name "LMR66100")(type "KiCad")(uri "${KIPRJMOD}/Footprint/LMR66100.pretty")(options "")(descr ""))
   (lib (name "CONN 0430450200")(type "KiCad")(uri "${KIPRJMOD}/Footprint/CONN 0430450200.pretty")(options "")(descr ""))
+  (lib (name "B04B_XASK_1")(type "KiCad")(uri "${KIPRJMOD}/Footprint/B04B_XASK_1")(options "")(descr ""))
+  (lib (name "Buzzer_12.6x9.5RM5.0")(type "KiCad")(uri "${KIPRJMOD}/Footprint/Buzzer_12.6x9.5RM5.0")(options "")(descr ""))
+  (lib (name "K7805JT_500R3")(type "KiCad")(uri "${KIPRJMOD}/Footprint/K7805JT_500R3")(options "")(descr ""))
+  (lib (name "CONV_K7812JT-500R3-LB")(type "KiCad")(uri "${KIPRJMOD}/Footprint/CONV_K7812JT-500R3-LB")(options "")(descr ""))
 )
