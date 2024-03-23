@@ -8,4 +8,5 @@
   (lib (name "EdgeConnector")(type "KiCad")(uri "${KIPRJMOD}/Symbols/EdgeConnector.kicad_sym")(options "")(descr ""))
   (lib (name "B04B_XASK_1")(type "KiCad")(uri "${KIPRJMOD}/Symbols/B04B_XASK_1.kicad_sym")(options "")(descr ""))
   (lib (name "K7812JT-500R3-LB")(type "KiCad")(uri "${KIPRJMOD}/Symbols/K7812JT-500R3-LB.kicad_sym")(options "")(descr ""))
+  (lib (name "MicroSD Card Reader")(type "KiCad")(uri "${KIPRJMOD}/Symbols/MicroSD Card Reader.kicad_sym")(options "")(descr ""))
 )

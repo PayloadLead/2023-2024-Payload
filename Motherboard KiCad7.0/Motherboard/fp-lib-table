@@ -7,4 +7,5 @@
   (lib (name "Buzzer_12.6x9.5RM5.0")(type "KiCad")(uri "${KIPRJMOD}/Footprint/Buzzer_12.6x9.5RM5.0")(options "")(descr ""))
   (lib (name "K7805JT_500R3")(type "KiCad")(uri "${KIPRJMOD}/Footprint/K7805JT_500R3")(options "")(descr ""))
   (lib (name "CONV_K7812JT-500R3-LB")(type "KiCad")(uri "${KIPRJMOD}/Footprint/CONV_K7812JT-500R3-LB")(options "")(descr ""))
+  (lib (name "MicroSD Card Reader")(type "KiCad")(uri "${KIPRJMOD}/Footprint/MicroSD Card Reader")(options "")(descr ""))
 )
