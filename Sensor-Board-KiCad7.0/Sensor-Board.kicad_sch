@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Payload Sensor Board")
+    (date "2024-03-23")
+    (rev "1.0")
+    (company "Queen's Rocket Engineering Team")
+    (comment 1 "Contributors: Kennan Bays, Joachim Blohm, Rowan Burke, Mohamad Gapre, Dominic Kilpatrick, Ben Taylor")
+  )
+
   (lib_symbols
     (symbol "B04B_XASK_1:B04B-XASK-1" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 8.89 6.35 0)
