@@ -10,4 +10,5 @@
   (lib (name "SWD_Header")(type "KiCad")(uri "${KIPRJMOD}/Footprint/SWD_Header.pretty")(options "")(descr ""))
   (lib (name "USB_Micro-B_Amphenol_10118194_Horizontal")(type "KiCad")(uri "${KIPRJMOD}/Footprint/USB_Micro-B_Amphenol_10118194_Horizontal")(options "")(descr ""))
   (lib (name "Rod_Mounting_Hole_6.7564mm")(type "KiCad")(uri "${KIPRJMOD}/Footprint/Rod_Mounting_Hole_6.7564mm")(options "")(descr ""))
+  (lib (name "MS5607_Handsolder")(type "KiCad")(uri "${KIPRJMOD}/Footprint/MS5607_Handsolder")(options "")(descr ""))
 )
