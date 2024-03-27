@@ -5,7 +5,7 @@
   (paper "A4")
 
   (title_block
-    (title "Gas Recognition Unit")
+    (title "Payload Sensor Board")
     (date "2024-03-23")
     (rev "1.0")
     (company "Queen's Rocket Engineering Team")
@@ -2214,7 +2214,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b123878f-efd8-4954-b818-1a8ae6c9a79d)
   )
-  (text "I2C Multiplexer" (at 251.46 97.79 0)
+  (text "I2C Multiplexer" (at 224.79 97.79 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid b5595bdc-c40f-4ce7-982b-3c7d9aa083a0)
   )

@@ -1,0 +1,37 @@
+# Multi-Distributor BoM Report #
+
+Project Name: Sensor-Board (has 137 symbols)
+Report Generated: 3/27/2024 1:22:16 AM
+Plugin Version: Mar.26.2024 (V1.0.5)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+
+JLCPCB BoM: True (10 rows)
+Digikey BoM: True (3 rows)
+Orphaned BoM: True (3 rows)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+
+BoM Generation Notes:
+(none)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+
+JLCPCB Parts Database File Present: True (337 parts, updated 2024.03.26)
+JLCPCB Parts Sanity-Checker Results (75 pass, 0 suspect, 16 not in database):
+- C140966 (C4) not in database
+- C140966 (C15) not in database
+- C264994 (J2) not in database
+- C407640 (R41) not in database
+- C407640 (R42) not in database
+- C407640 (R46) not in database
+- C407640 (R49) not in database
+- C407640 (R50) not in database
+- C407640 (R51) not in database
+- C106763 (U15) not in database
+- C106763 (U16) not in database
+- C106763 (U17) not in database
+- C106763 (U19) not in database
+- C106763 (U20) not in database
+- C106763 (U26) not in database
+- C130026 (U32) not in database
