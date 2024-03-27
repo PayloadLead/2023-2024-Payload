@@ -1,0 +1,41 @@
+# Multi-Distributor BoM Report #
+
+Project Name: Motherboard (has 92 symbols)
+Report Generated: 3/26/2024 7:57:54 PM
+Plugin Version: Mar.26.2024 (V1.0.5)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+
+JLCPCB BoM: True (31 rows)
+Digikey BoM: True (5 rows)
+Orphaned BoM: True (10 rows)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+
+BoM Generation Notes:
+(none)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+
+JLCPCB Parts Database File Present: True (337 parts, updated 2024.03.26)
+JLCPCB Parts Sanity-Checker Results (55 pass, 13 suspect, 7 not in database):
+- [D3]'s value is "LED", expected "Yellow"
+- [J1]'s value is "USB_B_Micro", expected "10118194-0001LF"
+- [Q1]'s footprint is "SOT-23", expected "SOIC-8"
+- [Q8]'s footprint is "SOT-23", expected "SOT-23-3L"
+- [Q9]'s footprint is "SOT-23", expected "SOT-23-3L"
+- [Q10]'s footprint is "SOT-23", expected "SOT-23-3L"
+- [Q11]'s footprint is "SOT-23", expected "SOT-23-3L"
+- [Q12]'s footprint is "SOT-23", expected "SOT-23-3L"
+- [Q13]'s footprint is "SOT-23", expected "SOT-23-3L"
+- [SW1]'s value is "SW_STM_RESET", expected "TS-1187A-B-A-B"
+- [SW3]'s value is "SW_STM_BOOT_MODE", expected "TS-1187A-B-A-B"
+- [U8]'s footprint is "InvenSense_QFN-24_4x4mm_P0.5mm", expected "QFN-24-EP_4x4"
+- [Y1]'s footprint is "Crystal_SMD_3225-4Pin_3.2x2.5mm", expected "SMD3225-4P"
+- C122431 (J3) not in database
+- C122431 (J4) not in database
+- C122431 (J6) not in database
+- C122431 (J7) not in database
+- C122431 (J10) not in database
+- C122431 (J11) not in database
+- C122431 (J12) not in database
