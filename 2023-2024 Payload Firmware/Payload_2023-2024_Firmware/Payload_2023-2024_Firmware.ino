@@ -1,7 +1,13 @@
+//Lot of the multiplexer firmware was taken from this website: https://randomnerdtutorials.com/tca9548a-i2c-multiplexer-esp32-esp8266-arduino/
+//For the NAU7802 library just go to Tools > Manage Libraries... > Search up library and install version 1.0.4
+
 #include <Wire.h>
 #define solenoidValvePin 1 // Set the pin of the solenoid valve
+#include <Adafruit_NAU7802.h>
 
-int dPin = 8;   //digital pin on STM32 that will read data
+Adafruit_NAU7802 nau1;
+Adafruit_NAU7802 nau2;
+Adafruit_NAU7802 nau3;
 
 // VOID SETUP
 void setup() {
@@ -10,10 +16,30 @@ void setup() {
 
   pinMode(solenoidValvePin, OUTPUT); // Assigning the solenoid pin as output
   
-  pinMode(dPin, INPUT);   //configuring dPin to act as input so that it can be read
-  
-  
   Wire.begin(); //start I2C communication with the Multiplexer
+  // Initialize sensor on bus number 2
+  TCA9548A(2);
+  if (!nau1.begin(0x76)) {
+    Serial.println("Could not find a valid NAU7802 sensor on bus 2, check wiring!");
+    while (1);
+  }
+  Serial.println();
+  
+  // Initialize sensor on bus number 3
+  TCA9548A(3);
+  if (!nau2.begin(0x76)) {
+    Serial.println("Could not find a valid NAU7802 sensor on bus 3, check wiring!");
+    while (1);
+  }
+  Serial.println();
+  
+  // Initialize sensor on bus number 4
+  TCA9548A(4);
+  if (!nau3.begin(0x76)) {
+    Serial.println("Could not find a valid NAU7802 ADC on bus 4, check wiring!");
+    while (1);
+  }
+  Serial.println();
 }
 
 
@@ -21,11 +47,11 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
    //Print values for sensor 1
-  printValuesCO(2, dPin);
-  printValuesSO2(3, dPin);
-  printValuesNO2(4, dPin);
+  printValuesCO(2);
+  printValuesSO2(3);
+  printValuesNO2(4);
 
-  delay(1000);
+  delay(100);
 }
 
 
@@ -34,46 +60,49 @@ void loop() {
 void TCA9548A(uint8_t bus){
   Wire.beginTransmission(0x70);  // TCA9548A address is 0x70
   Wire.write(1 << bus);          // send byte to select bus
-  delay(100);
-  Wire.requestFrom(bus, Wire.available());
-  char availableBytes = Wire.read();
-  Serial.print(availableBytes);
   Wire.endTransmission();
-  Serial.print(bus);
 }
 
-void printValuesCO(int bus, int digitalPinName) {
+void printValuesCO(int bus) {
   TCA9548A (bus);
   Serial.print("Sensor number on bus");
   Serial.println(bus);
   Serial.print("Carbon Monoxide Concentration = ");
-  Serial.print();
-  Serial.println(" ppm");
+  while (! nau1.available()) {
+    delay(1);
+  }
+  int32_t val = nau1.read();
+  Serial.println(val);
   
   Serial.println();
 }
 
-void printValuesSO2(int bus, int digitalPinName) {
+void printValuesSO2(int bus) {
   TCA9548A (bus);
   Serial.print("Sensor number on bus");
   Serial.println(bus);
   Serial.print("Sulfate Concentration = ");
-  Serial.print(digitalRead(digitalPinName));
-  Serial.println(" ppm");
+  while (! nau2.available()) {
+    delay(1);
+  }
+  int32_t val = nau2.read();
+  Serial.println(val);
   
   Serial.println();
 }
 
-void printValuesNO2(int bus, int digitalPinName) {
+void printValuesNO2(int bus) {
   TCA9548A (bus);
   Serial.print("Sensor number on bus");
   Serial.println(bus);
-  Serial.print("Nitrate Concentration = ");
-  Serial.print(digitalRead(digitalPinName));
-  Serial.println(" ppm");
+  Serial.print("Sulfate Concentration = ");
+  while (! nau3.available()) {
+    delay(1);
+  }
+  int32_t val = nau3.read();
+  Serial.println(val);
   
   Serial.println();
-
   //can easily add more sensors if necessary, as well as conversion factors from bits to ppm and what not
 }
 
