@@ -1,13 +1,13 @@
 # Multi-Distributor BoM Report #
 
 Project Name: Motherboard (has 96 symbols)
-Report Generated: 3/28/2024 6:12:37 AM
+Report Generated: 3/28/2024 9:08:00 AM
 Plugin Version: Mar.26.2024 (V1.0.5)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-JLCPCB BoM: True (34 rows)
-Digikey BoM: True (7 rows)
+JLCPCB BoM: True (35 rows)
+Digikey BoM: True (6 rows)
 Orphaned BoM: True (7 rows)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -18,7 +18,7 @@ BoM Generation Notes:
 - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 JLCPCB Parts Database File Present: True (337 parts, updated 2024.03.26)
-JLCPCB Parts Sanity-Checker Results (60 pass, 13 suspect, 7 not in database):
+JLCPCB Parts Sanity-Checker Results (60 pass, 13 suspect, 8 not in database):
 - [D3]'s value is "LED", expected "Yellow"
 - [D4]'s value is "3.3V_A PWR (GRN)", expected "Green"
 - [J1]'s value is "USB_B_Micro", expected "10118194-0001LF"
@@ -39,3 +39,4 @@ JLCPCB Parts Sanity-Checker Results (60 pass, 13 suspect, 7 not in database):
 - C122431 (J10) not in database
 - C122431 (J11) not in database
 - C122431 (J12) not in database
+- C264994 (J5) not in database

@@ -9534,7 +9534,7 @@
     (property "Datasheet" "B04B-XASK-1" (at 266.7 172.72 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (property "Digikey" "455-B04B-XASK-1-ND" (at 267.97 175.26 0)
+    (property "LCSC" "C264994" (at 267.97 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid 011ed1de-0d3b-4ec4-bc6a-3a586e60112c))
