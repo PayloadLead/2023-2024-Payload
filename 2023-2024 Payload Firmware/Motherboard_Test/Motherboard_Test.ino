@@ -62,6 +62,7 @@ const long INT_REF = 1216;
 #define EXPECTED_GYRO_ADDR 0x69
 #define EXPECTED_PRESS_ADDR 0x76
 #define EXPECTED_MULTI_ADDR 0x70
+#define EXPECTED_BME_ADDR 0x77
 
 // Prog Vars
 byte statusCode = 0; //how many times to flash LED
@@ -307,6 +308,17 @@ void tryAirflow(){
   return true;
   }//autoTestMultiplexer()
 
+   bool autoTestBME(){
+  Wire2.beginTransmission(EXPECTED_BME_ADDR);
+  byte error = Wire2.endTransmission();
+  if (error != 0) {
+    Serial.print(F("\tER: Digital Multiplexer not at addr 0x"));
+    Serial.println(EXPECTED_BME_ADDR,HEX);
+    return false;
+  }//if()
+  return true;
+  }//autoTestMultiplexer()
+
 
 
 void setup() {
@@ -393,6 +405,7 @@ void runAutoTests() {
   bool regPass = checkInTolerance(EXPECTED_VREG_MV, vReg, VOLT_TOLERANCE);
   bool vSensePass = checkInTolerance(EXPECTED_VSENSE_MV, vSense, VOLT_TOLERANCE);
   bool multiPass = autoTestMultiplexer(); 
+  bool bmePass = autoTestBME();
 
   Serial.println(F("\n\n"));
   Serial.println(F("      AUTOMATIC TEST RESULTS"));
@@ -438,7 +451,12 @@ void runAutoTests() {
   } else {         Serial.println(F("\tFAIL"));
   statusCode = 7; }//if
 
-  Serial.print(F("08. TCA9548a MuxL "));
+  Serial.print(F("08. TCA9548a MuxL: "));
+  if (multiPass) { Serial.println(F("\tPass"));
+  } else {         Serial.println(F("\tFAIL"));
+  statusCode = 8; }//if
+
+  Serial.print(F("09. BME680: "));
   if (multiPass) { Serial.println(F("\tPass"));
   } else {         Serial.println(F("\tFAIL"));
   statusCode = 8; }//if
