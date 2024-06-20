@@ -25,6 +25,9 @@
 #include <Adafruit_NeoPixel.h> //https://www.arduino.cc/reference/en/libraries/adafruit-neopixel/
 #include <Adafruit_NAU7802.h>
 #include <SparkFun_I2C_Mux_Arduino_Library.h> //https://github.com/sparkfun/SparkFun_I2C_Mux_Arduino_Library/blob/master/examples/Example3_AdvancedWireSettings/Example3_AdvancedWireSettings.ino
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
+#include <MS5xxx.h>
 
 // Pinouts
 
@@ -45,6 +48,11 @@
 #define SOL3_PIN PA2
 #define SOL4_PIN PA3
 
+// MPU6050 launch events declarations
+Adafruit_MPU6050 mpu;
+bool potentialLaunch = false;
+float highGTime = 0;
+#define G_THRESHOLD -((9.80665F) * 1.5)
 
 // Battery sense voltage divider ratio (default 4.00x)
 const float BATT_SENSE_MULTIPLIER = 4.00;
@@ -297,27 +305,27 @@ void tryAirflow(){
 
 //Returns true if digital multiplexer works
   //SURFACE-LEVEL TEST
-  bool autoTestMultiplexer(){
-  Wire2.beginTransmission(EXPECTED_MULTI_ADDR);
-  byte error = Wire2.endTransmission();
-  if (error != 0) {
-    Serial.print(F("\tER: Digital Multiplexer not at addr 0x"));
-    Serial.println(EXPECTED_MULTI_ADDR,HEX);
-    return false;
-  }//if()
-  return true;
-  }//autoTestMultiplexer()
+  // bool autoTestMultiplexer(){
+  // Wire2.beginTransmission(EXPECTED_MULTI_ADDR);
+  // byte error = Wire2.endTransmission();
+  // if (error != 0) {
+  //   Serial.print(F("\tER: Digital Multiplexer not at addr 0x"));
+  //   Serial.println(EXPECTED_MULTI_ADDR,HEX);
+  //   return false;
+  // }//if()
+  // return true;
+  // }//autoTestMultiplexer()
 
    bool autoTestBME(){
-  Wire2.beginTransmission(EXPECTED_BME_ADDR);
-  byte error = Wire2.endTransmission();
+  Wire.beginTransmission(EXPECTED_BME_ADDR);
+  byte error = Wire.endTransmission();
   if (error != 0) {
-    Serial.print(F("\tER: Digital Multiplexer not at addr 0x"));
+    Serial.print(F("\tER: BME680 not at addr 0x"));
     Serial.println(EXPECTED_BME_ADDR,HEX);
     return false;
   }//if()
   return true;
-  }//autoTestMultiplexer()
+  }//autoTestBMEr()
 
 
 
@@ -335,6 +343,10 @@ void setup() {
   // Add WS2812B
   rgbLEDs.begin(); // initialize WS2812Bs
 
+  // MPU6050 begin test statement
+  Serial.print("Adafruit MPU6050 test!");
+  
+
   // Begin Serial
   Serial.begin(9600); //Baud doesn't matter for STM32 USB
   int countdown = 5000;
@@ -351,8 +363,7 @@ void setup() {
   Wire.setSDA(I2C_SDA_PIN);
   Wire.setSCL(I2C_SCL_PIN);
   Wire.begin();
-// Configure I2C (Sensorboard)
-  Wire2.begin();
+
   // Print details
   Serial.println(F("OKA Altimeter Integrity Test"));
   Serial.print(F("Uploaded "));
@@ -365,6 +376,26 @@ void setup() {
   // Prompt for manual tests
   Serial.println(F(" "));
   Serial.println(F("Press any key to begin manual testing"));  
+
+  // MPU6050 initialization
+  if (!mpu.begin(0x69)) {
+    //softSerial.println("Failed to find MPU6050 chip");
+	Serial.println("Failed to find MPU6050 chip");
+    while (1) {
+      delay(10);
+    }
+  }
+  
+  Serial.println("MPU6050 Found!");
+  
+  mpu.setAccelerometerRange(MPU6050_RANGE_16_G);
+
+  mpu.setGyroRange(MPU6050_RANGE_500_DEG);
+
+  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+
+  Serial.print("");
+  delay(100);
 
 }//setup()
 
@@ -404,7 +435,7 @@ void runAutoTests() {
   bool pressPass = autoTestPressureSensor();
   bool regPass = checkInTolerance(EXPECTED_VREG_MV, vReg, VOLT_TOLERANCE);
   bool vSensePass = checkInTolerance(EXPECTED_VSENSE_MV, vSense, VOLT_TOLERANCE);
-  bool multiPass = autoTestMultiplexer(); 
+  //bool multiPass = autoTestMultiplexer(); 
   bool bmePass = autoTestBME();
 
   Serial.println(F("\n\n"));
@@ -451,13 +482,13 @@ void runAutoTests() {
   } else {         Serial.println(F("\tFAIL"));
   statusCode = 7; }//if
 
-  Serial.print(F("08. TCA9548a MuxL: "));
-  if (multiPass) { Serial.println(F("\tPass"));
-  } else {         Serial.println(F("\tFAIL"));
-  statusCode = 8; }//if
+  // Serial.print(F("08. TCA9548a MuxL: "));
+  // if (multiPass) { Serial.println(F("\tPass"));
+  // } else {         Serial.println(F("\tFAIL"));
+  // statusCode = 8; }//if
 
-  Serial.print(F("09. BME680: "));
-  if (multiPass) { Serial.println(F("\tPass"));
+  Serial.print(F("08. BME680: "));
+  if (bmePass) { Serial.println(F("\tPass"));
   } else {         Serial.println(F("\tFAIL"));
   statusCode = 8; }//if
   
@@ -544,7 +575,8 @@ void manualTestSuite() {
   
   Serial.println(F("\nPress any key when ready to listen for buzzer"));
   pressAnyKey();
-  buzzerSweep(5);
+  byte loops = 5;
+  buzzerSweep(loops);
   Serial.println(F("[Y/N] Did buzzer sound?"));
   bool buzzerStatus = confirmPrompt();
 
@@ -569,6 +601,8 @@ void manualTestSuite() {
 
 }//manualTestSuite
 
+// Define pressure, temperature, altitude
+float P_val,T_val,H_val;
 
 void loop() {
   // Loop Code
@@ -595,4 +629,25 @@ void loop() {
     }//for
     delay(1000);
   }//if
+
+
+  /* Get new sensor events with the readings */
+  sensors_event_t a, g, temp;
+  mpu.getEvent(&a, &g, &temp);
+
+  if (!potentialLaunch && a.acceleration.z < G_THRESHOLD) {
+    potentialLaunch = true;
+    highGTime = millis();
+  }
+
+  if (potentialLaunch && millis() - highGTime > 50) {
+    if (a.acceleration.z < G_THRESHOLD) {
+      //softSerial.print("LAUNCH");
+	  Serial.print("LAUNCH");
+    } else {
+      potentialLaunch = false;
+    }
+  }
+  
+  
 }//loop()
