@@ -62,7 +62,7 @@ void selfAdjustDelay(){ //From Kennan Bays
 
 // BME680 ASL pressure declaration
 #define SEALEVELPRESSURE_HPA (1013.25)
-//Adafruit_BME680 bme;
+Adafruit_BME680 bme;
 
 // SD module constants
 const uint16_t N = 9;
@@ -97,11 +97,11 @@ double timeToApogee = 50000;
 MS5xxx sensor(&Wire);
 
 // SENSORS VALUES TO MEASURE:
-// float bmeTemp = 0;
-// float bmePress = 0;
-// float bmeHum = 0;
-// float bmeGas = 0;
-// float bmeAlt = 0;
+float bmeTemp = 0;
+float bmePress = 0;
+float bmeHum = 0;
+float bmeGas = 0;
+float bmeAlt = 0;
 float msTemp = 0;
 float msPress = 0;
 float msAlt = 0;
@@ -113,7 +113,7 @@ float mpuGyroY = 0;
 float mpuGyroZ = 0;
 
 //EVENT VALUES TO MEASURE:
-float time = 0;
+float eventTime = 0;
 float launch = 0;
 
 // Battery sense voltage divider ratio (default 4.00x)
@@ -132,7 +132,7 @@ const long INT_REF = 1216;
 #define EXPECTED_GYRO_ADDR 0x69
 #define EXPECTED_PRESS_ADDR 0x76
 #define EXPECTED_MULTI_ADDR 0x70
-//#define EXPECTED_BME_ADDR 0x77
+#define EXPECTED_BME_ADDR 0x77
 
 // Prog Vars
 byte statusCode = 0; //how many times to flash LED
@@ -288,17 +288,17 @@ float airflow(){
   fill1Purge2();
 }
 
-// // Automatic test: BME680 voc sensor
-// bool autoTestBME(){
-//   Wire.beginTransmission(EXPECTED_BME_ADDR);
-//   byte error = Wire.endTransmission();
-//   if (error != 0) {
-//     Serial.print(F("\tER: BME680 not at addr 0x"));
-//     Serial.println(EXPECTED_BME_ADDR,HEX);
-//     return false;
-//   }//if()
-//   return true;
-//   }//autoTestBMEr()
+ // Automatic test: BME680 voc sensor
+ bool autoTestBME(){
+   Wire.beginTransmission(EXPECTED_BME_ADDR);
+   byte error = Wire.endTransmission();
+   if (error != 0) {
+     Serial.print(F("\tER: BME680 not at addr 0x"));
+     Serial.println(EXPECTED_BME_ADDR,HEX);
+     return false;
+   }//if()
+     return true;
+ }// autoTestBMEr()
 
 
 // Function to check if voltage is correct 
@@ -337,7 +337,7 @@ void runAutoTests(){
   bool pressPass = autoTestPressureSensor();
   bool regPass = checkInTolerance(EXPECTED_VREG_MV, vReg, VOLT_TOLERANCE);
   bool vSensePass = checkInTolerance(EXPECTED_VSENSE_MV, vSense, VOLT_TOLERANCE);
-  // bool bmePass = autoTestBME();
+  bool bmePass = autoTestBME();
 }
 
   // Function to sound the buzzer when the payload is armed
@@ -431,17 +431,17 @@ void setup(){
   }
 
   // Checking connection to BME680
-  // if (!bme.begin()) {
-  //   Serial.println("Could not find a valid BME680 sensor, check wiring!");
-  //   while (1);
-  // }
+   if (!bme.begin()) {
+     Serial.println("Could not find a valid BME680 sensor, check wiring!");
+     while (1);
+   }
 
   // Set up oversampling and filter initialization for BME680
-  //bme.setTemperatureOversampling(BME680_OS_8X);
-  // bme.setHumidityOversampling(BME680_OS_2X);
-  // bme.setPressureOversampling(BME680_OS_4X);
-  // bme.setIIRFilterSize(BME680_FILTER_SIZE_3);
-  // bme.setGasHeater(320, 150); // 320*C for 150 ms
+   bme.setTemperatureOversampling(BME680_OS_8X);
+   bme.setHumidityOversampling(BME680_OS_2X);
+   bme.setPressureOversampling(BME680_OS_4X);
+   bme.setIIRFilterSize(BME680_FILTER_SIZE_3);
+   bme.setGasHeater(320, 150); // 320*C for 150 ms
 
   int fileCounter = 0;
   String sensFileName = String(String(fileCounter) + "sens");
@@ -496,12 +496,12 @@ void loop(){
   detectLaunch();
   
   // Get data from BME680
-  //bme.performReading();
-  //bmeTemp = bme.temperature;
-  //bmePress = bme.pressure;
-  //bmeHum = bme.humidity;
-  //bmeGas = bme.gas_resistance;
-  //bmeAlt = bme.readAltitude(SEALEVELPRESSURE_HPA);
+  bme.performReading();
+  bmeTemp = bme.temperature;
+  bmePress = bme.pressure;
+  bmeHum = bme.humidity;
+  bmeGas = bme.gas_resistance;
+  bmeAlt = bme.readAltitude(SEALEVELPRESSURE_HPA);
   
   // Get data from MS5607
   msTemp = sensor.GetTemp();
@@ -524,7 +524,7 @@ void loop(){
   delay(timeToApogee); //
   airflow();
   launch = detectLaunch();
-  time = millis();
+  eventTime = millis();
   }
   
 
@@ -553,7 +553,7 @@ void loop(){
   sensValues[7] = msPress;
   sensValues[8] = msAlt;
 
-  eventValues[0] = time;
+  eventValues[0] = eventTime;
   eventValues[1] = launch;
 
   // Add Sensor values and event values to buffer
@@ -595,4 +595,3 @@ void loop(){
     NVIC_SystemReset();
   }
 }
-
