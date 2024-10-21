@@ -7,6 +7,7 @@ Purpose: Decodes data from the 2023-2024 G.R.U payload binary log file. This scr
 Note: I used TABS for indentation
 """
 
+import csv
 
 SENSORS_BINARY_FILE = "1SENS.bin"
 OUTPUT_FILE = "payload_data.csv"
@@ -37,10 +38,13 @@ def recoverVal4B(inArr, startInd):
 	if (len(inArr) <= startInd+3):
 		return 0
 	
-	outInt = inArr[startInd+0] << 24
-	outInt += inArr[startInd+1] << 16
-	outInt += inArr[startInd+2] << 8
-	outInt += inArr[startInd+3]
+	b1 = (inArr[startInd+0] )
+	b2 = (inArr[startInd+1] )
+	b3 = (inArr[startInd+2] )
+	b4 = (inArr[startInd+3] )
+	
+	outInt = int.from_bytes([b1,b2,b3,b4], byteorder='big', signed=True)
+
 	return outInt
 
 # Given an array of bytes and a starting point,
@@ -52,7 +56,7 @@ def recoverVal2B(inArr, startInd):
 	outInt += inArr[startInd+1]
 	return outInt
 
-
+i = 0
 if __name__ == "__main__":
 	## Read input binary file
 	with open(SENSORS_BINARY_FILE, 'rb') as f:
@@ -60,7 +64,7 @@ if __name__ == "__main__":
 	print("[OK] Read binary file")
 	
 	## Split data into rows
-	BYTES_PER_ROW = 40
+	BYTES_PER_ROW = 4 + 4*9
 	sensorRows = []
 	pos = 0
 	while (pos+BYTES_PER_ROW < len(rawSensor)):
@@ -74,7 +78,8 @@ if __name__ == "__main__":
 	for row in sensorRows:
 		rowValues = []
 		# split row into values
-		rowValues.append(recoverVal4B(row, 0)) #0-3
+		i += 1
+		rowValues.append(recoverVal4B(row, 0)) #0-3				time
 		rowValues.append(recoverVal4B(row, 4)/1000) #4-5
 		rowValues.append(recoverVal4B(row, 8)/1000) #6-7
 		rowValues.append(recoverVal4B(row, 12)/1000) #8-9
@@ -84,8 +89,11 @@ if __name__ == "__main__":
 		rowValues.append(recoverVal4B(row, 28)) #16-17
 		rowValues.append(recoverVal4B(row, 32)) #18-19
 		rowValues.append(recoverVal4B(row, 36)) #20-21
-		outRows.append(rowValues)
-		print(rowValues)
+		
+		if (rowValues[0] >= 0):
+			outRows.append(rowValues)
+			if (i&100 == 0):
+				print(rowValues)
 	print("[OK] Finished parsing rows")
 	
 	## Export rows to CSV
@@ -95,6 +103,15 @@ if __name__ == "__main__":
 	#HEADER
 	#outRows
 	#OUTPUT_FILE
+	
+	# Open the file in write mode
+	with open(OUTPUT_FILE, mode='w', newline='') as file:
+		writer = csv.writer(file)
+		writer.writerow(HEADER)
+		# Write each row of data to the CSV file
+		for row in outRows:
+			writer.writerow(row)
+	
 	
 	print("[OK] Wrote rows to output file")
 	
